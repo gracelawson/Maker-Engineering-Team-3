@@ -1,6 +1,6 @@
 #include <Arduino_GFX_Library.h>
 #include <Arduino.h>
-#include "soc/rtc_wdt.h"
+
 
 //Parameters for Screen
 #define TFT_CS 33
@@ -124,8 +124,7 @@ void resetInterupts();
 
 void setup() {
   //Fuck you watchdog
-  rtc_wdt_protect_off();
-  rtc_wdt_disable();
+  
     //Setup Screen
     gfx->begin();
     gfx->fillScreen(WHITE);
